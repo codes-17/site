@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="17codes - Learn coding skills through interactive challenges and structured learning" />
+  <title>17codes - Learn. Build. Grow. Together.</title>
+
+  <!-- Tailwind CSS -->
+  <link href="./output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:wght@300..900&display=swap" rel="stylesheet" />
+
+  <!-- Smooth Scroll & Hamburger Style -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+
+    /* Hamburger animation */
+    #menu-btn.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(6px) translateX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #menu-btn.open span:nth-child(2) {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    #menu-btn.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-6px) translateX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hamburger-line {
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Mobile menu transition */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    #mobile-menu.open {
+      max-height: 300px;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0D1017] text-white px-6 md:px-10">
+
+  <!-- Header -->
+  <header class="py-6">
+    <nav class="flex items-center justify-between">
+      <a href="#" aria-label="17CODES homepage">
+        <h1 class="font-[Montserrat] font-bold text-3xl sm:text-4xl">17CODES</h1>
+      </a>
+
+      <!-- Hamburger Icon -->
+      <button id="menu-btn" class="flex flex-col justify-between w-8 h-6 md:hidden z-50" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-line bg-white h-1 w-full rounded-sm"></span>
+        <span class="hamburger-line bg-white h-1 w-full rounded-sm"></span>
+        <span class="hamburger-line bg-white h-1 w-full rounded-sm"></span>
+      </button>
+
+      <!-- Desktop Nav Links -->
+      <ul id="nav-links" class="hidden md:flex items-center gap-6 md:gap-10 lg:gap-12 text-sm sm:text-base">
+        <li class="cursor-pointer hover:text-[#2889F4] transition-colors"><a href="#">Home</a></li>
+        <li class="cursor-pointer hover:text-[#2889F4] transition-colors"><a href="#about">About</a></li>
+        <li class="cursor-pointer hover:text-[#2889F4] transition-colors"><a href="#resources">Resources</a></li>
+        <li class="cursor-pointer hover:text-[#2889F4] transition-colors"><a href="#challenges">Challenges</a></li>
+        <li>
+          <a href="#contact">
+            <button class="px-4 py-2 bg-[#2889F4] rounded-md hover:bg-[#1a6fd1] transition-colors text-sm sm:text-base">
+              Contact Us
+            </button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Nav Links -->
+    <div id="mobile-menu" class="md:hidden">
+      <ul class="flex flex-col gap-4 mt-4 text-sm">
+        <li class="cursor-pointer hover:text-[#2889F4] transition-colors py-2"><a href="#">Home</a></li>
+        <li class="cursor-pointer hover:text-[#2889F4] transition-colors py-2"><a href="#about">About</a></li>
+        <li class="cursor-pointer hover:text-[#2889F4] transition-colors py-2"><a href="#resources">Resources</a></li>
+        <li class="cursor-pointer hover:text-[#2889F4] transition-colors py-2"><a href="#challenges">Challenges</a></li>
+        <li class="py-2">
+          <a href="#contact">
+            <button class="px-4 py-2 bg-[#2889F4] rounded-md hover:bg-[#1a6fd1] transition-colors w-fit">
+              Contact Us
+            </button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center justify-center text-center px-6 py-12 bg-[#0D1017] text-white min-h-[30vh] md:min-h-[80vh]">
+    <h2 class="text-5xl sm:text-6xl font-bold mb-4">Learn. Build. Grow. Together.</h2>
+    <p class="text-lg text-gray-400 mb-6">
+      Build real-world coding skills through interactive challenges and structured learning.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <a href="#getstarted" class="transition duration-300">
+        <button class="border border-[#2889F4] text-[#2889F4] px-6 py-3 rounded-md cursor-pointer hover:bg-[#2889F4] hover:text-white transition-colors">
+          Get Started
+        </button>
+      </a>
+      <a href="#community">
+        <button class="bg-[#2889F4] text-white px-6 py-3 rounded-md cursor-pointer hover:bg-[#1a6fd1] transition-colors">
+          Join The Community
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Domain Cards Section -->
+  <section id="getstarted" class="py-16 px-4 md:px-20 bg-[#0D1017] text-white scroll-mt-20">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-2">Get Started</h2>
+      <p class="text-lg text-gray-300">Choose your domain</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+        <p class="text-gray-400">HTML, CSS, JS, React, Tailwind, and more.</p>
+      </div>
+      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">App Development</h3>
+        <p class="text-gray-400">Build apps using Flutter, React Native, or Kotlin.</p>
+      </div>
+      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">DSA</h3>
+        <p class="text-gray-400">Master Data Structures and Algorithms for interviews.</p>
+      </div>
+      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Java Programming</h3>
+        <p class="text-gray-400">Object-oriented programming and backend development.</p>
+      </div>
+      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Python Programming</h3>
+        <p class="text-gray-400">Build scripts, automate tasks, or dive into AI/ML.</p>
+      </div>
+      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Artificial Intelligence</h3>
+        <p class="text-gray-400">Learn ML, deep learning, and build smart apps.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 100 Days DSA Section -->
+  <section id="challenges" class="py-12 scroll-mt-20">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold mb-6">100 Days of DSA Challenge</h2>
+    </div>
+    <div class="bg-[#1A1E28] rounded-xl p-6 shadow-md max-w-md mx-auto text-left">
+      <h3 class="text-lg font-semibold mb-2">100 Days of DSA - Python</h3>
+      <p class="text-sm text-gray-400 mb-4">
+        Master DSA using Python in our structured, step-by-step 100-day program.
+      </p>
+      <button class="w-full bg-[#2889F4] text-white py-2 rounded-md mb-2 font-medium hover:bg-[#1a6fd1] transition-colors">Join Now</button>
+      <button class="w-full border border-[#2889F4] text-[#2889F4] py-2 rounded-md font-medium hover:bg-[#2889F4] hover:text-white transition-colors">
+        Download Syllabus
+      </button>
+    </div>
+  </section>
+
+  <!-- Empty sections for navigation links -->
+  <section id="about" class="py-12 scroll-mt-20">
+    <!-- About content will go here -->
+  </section>
+
+  <section id="resources" class="py-12 scroll-mt-20">
+    <!-- Resources content will go here -->
+  </section>
+
+  <section id="community" class="py-12 scroll-mt-20">
+    <!-- Community content will go here -->
+  </section>
+
+  <section id="contact" class="py-12 scroll-mt-20">
+    <!-- Contact content will go here -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 mt-12 border-t border-gray-800">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-400">© 2025 17CODES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', menuBtn.classList.contains('open'));
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
