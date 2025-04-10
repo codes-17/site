@@ -51,6 +51,26 @@
     #mobile-menu.open {
       max-height: 500px;
     }
+
+    .more-cards-wrapper {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .more-cards-wrapper.open {
+      max-height: 1000px;
+    }
+
+    @media (min-width: 768px) {
+      .more-cards-wrapper {
+        max-height: none !important;
+        overflow: visible;
+      }
+      #show-more-btn {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -106,7 +126,7 @@
 
   <!-- Hero -->
   <section class="flex flex-col items-center justify-center text-center py-16 sm:py-20 md:min-h-[80vh]">
-    <h2 class="text-4xl sm:text-5xl font-bold mb-4 leading-tight">Learn. Build. Grow. Together.</h2>
+    <h2 class="text-5xl sm:text-6xl font-bold mb-4 leading-tight">Learn. Build. Grow. Together.</h2>
     <p class="text-base sm:text-lg text-gray-400 mb-6 max-w-xl">Build real-world coding skills through interactive challenges and structured learning.</p>
     <div class="flex flex-col sm:flex-row gap-4">
       <a href="#getstarted">
@@ -125,10 +145,11 @@
   <!-- Domain Cards -->
   <section id="getstarted" class="py-16 scroll-mt-20">
     <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-5xl font-bold mb-2">Get Started</h2>
+      <h2 class="text-4xl sm:text-5xl font-bold mb-2">Get Started</h2>
       <p class="text-base sm:text-lg text-gray-300">Choose your domain</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Always visible cards -->
       <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">DSA</h3>
         <p class="text-gray-400 mb-4">Master Data Structures & Algorithms.</p>
@@ -153,11 +174,13 @@
         <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
       </div>
 
-      <!-- More hidden cards -->
-      <div class="hidden more-cards bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
-        <p class="text-gray-400 mb-4">Learn ML, deep learning & smart apps.</p>
-        <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
+      <!-- Hidden on mobile -->
+      <div class="more-cards-wrapper">
+        <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
+          <p class="text-gray-400 mb-4">Learn ML, deep learning & smart apps.</p>
+          <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
+        </div>
       </div>
     </div>
 
@@ -168,36 +191,14 @@
     </div>
   </section>
 
-  <!-- 100 Days DSA -->
-  <section id="challenges" class="py-12 scroll-mt-20">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl font-bold mb-6">100 Days of DSA Challenge</h2>
-    </div>
-    <div class="bg-[#1A1E28] rounded-xl p-6 shadow-md max-w-md mx-auto text-left">
-      <h3 class="text-lg font-semibold mb-2">100 Days of DSA - Python</h3>
-      <p class="text-sm text-gray-400 mb-4">Master DSA using Python in our structured, step-by-step 100-day program.</p>
-      <button class="w-full bg-[#2889F4] text-white py-2 rounded-md mb-2 hover:bg-[#1a6fd1] transition">Join Now</button>
-      <button class="w-full border border-[#2889F4] text-[#2889F4] py-2 rounded-md hover:bg-[#2889F4] hover:text-white transition">Download Syllabus</button>
-    </div>
-  </section>
-
-  <!-- Placeholder Sections -->
-  <section id="about" class="py-12 scroll-mt-20"></section>
-  <section id="resources" class="py-12 scroll-mt-20"></section>
-  <section id="community" class="py-12 scroll-mt-20"></section>
-  <section id="contact" class="py-12 scroll-mt-20"></section>
-
-  <!-- Footer -->
-  <footer class="py-8 mt-12 border-t border-gray-800 text-center text-gray-400">
-    © 2025 17CODES. All rights reserved.
-  </footer>
-
   <!-- Scripts -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const showMoreBtn = document.getElementById('show-more-btn');
-    const hiddenCards = document.querySelectorAll('.more-cards');
+    const moreCardsWrapper = document.querySelector('.more-cards-wrapper');
+
+    window.history.scrollRestoration = 'manual';
 
     menuBtn.addEventListener('click', () => {
       menuBtn.classList.toggle('open');
@@ -215,7 +216,7 @@
     });
 
     showMoreBtn?.addEventListener('click', () => {
-      hiddenCards.forEach(card => card.classList.remove('hidden'));
+      moreCardsWrapper.classList.add('open');
       showMoreBtn.style.display = 'none';
     });
   </script>
