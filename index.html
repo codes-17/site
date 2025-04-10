@@ -113,7 +113,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center text-center px-6 py-12 bg-[#0D1017] text-white min-h-[30vh] md:min-h-[80vh]">
+  <section class="flex flex-col items-center justify-center text-center px-6 sm:py-12 pt-20 bg-[#0D1017] text-white min-h-[30vh] md:min-h-[80vh]">
     <h2 class="text-5xl sm:text-6xl font-bold mb-4">Learn. Build. Grow. Together.</h2>
     <p class="text-lg text-gray-400 mb-6">
       Build real-world coding skills through interactive challenges and structured learning.
@@ -133,39 +133,59 @@
   </section>
 
   <!-- Domain Cards Section -->
-  <section id="getstarted" class="py-16 px-4 md:px-20 bg-[#0D1017] text-white scroll-mt-20">
-    <div class="text-center mb-10">
-      <h2 class="text-4xl sm:text-5xl font-bold mb-2">Get Started</h2>
-      <p class="text-lg text-gray-300">Choose your domain</p>
-    </div>
+    <section id="getstarted" class="py-16 px-4 md:px-20 bg-[#0D1017] text-white scroll-mt-20">
+      <div class="text-center mb-12">
+        <h2 class="text-5xl sm:text-6xl font-bold mb-2">Get Started</h2>
+        <p class="text-lg text-gray-300">Choose your domain</p>
+      </div>
+    
+      <div id="domain-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- First 4 Cards -->
+        <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-2">DSA</h3>
+          <p class="text-gray-400 mb-4">Master Data Structures & Algorithms.</p>
+          <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
+        </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-        <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-        <p class="text-gray-400">HTML, CSS, JS, React, Tailwind, and more.</p>
+        <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+          <p class="text-gray-400 mb-4">HTML, CSS, JS, React, Tailwind, and more.</p>
+          <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
+        </div>
+    
+        <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-2">Python Programming</h3>
+          <p class="text-gray-400 mb-4">Scripting, automation, and ML with Python.</p>
+          <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
+        </div>
+    
+        <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-2">Java Programming</h3>
+          <p class="text-gray-400 mb-4">OOP & backend development in Java.</p>
+          <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
+        </div>
+    
+        <!-- Hidden cards -->
+        <div class="hidden more-cards bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-2">Python Programming</h3>
+          <p class="text-gray-400 mb-4">Scripting, automation, and ML with Python.</p>
+          <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
+        </div>
+    
+        <div class="hidden more-cards bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-2">Artificial Intelligence</h3>
+          <p class="text-gray-400 mb-4">Learn ML, deep learning & smart apps.</p>
+          <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md">Start Learning</button>
+        </div>
       </div>
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-        <h3 class="text-xl font-semibold mb-2">App Development</h3>
-        <p class="text-gray-400">Build apps using Flutter, React Native, or Kotlin.</p>
+    
+      <!-- More Button (visible only on mobile) -->
+      <div class="text-center mt-8 md:hidden">
+        <button id="show-more-btn" class="text-[#2889F4] border border-[#2889F4] px-6 py-2 rounded-md">
+          Show More
+        </button>
       </div>
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-        <h3 class="text-xl font-semibold mb-2">DSA</h3>
-        <p class="text-gray-400">Master Data Structures and Algorithms for interviews.</p>
-      </div>
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-        <h3 class="text-xl font-semibold mb-2">Java Programming</h3>
-        <p class="text-gray-400">Object-oriented programming and backend development.</p>
-      </div>
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-        <h3 class="text-xl font-semibold mb-2">Python Programming</h3>
-        <p class="text-gray-400">Build scripts, automate tasks, or dive into AI/ML.</p>
-      </div>
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-        <h3 class="text-xl font-semibold mb-2">Artificial Intelligence</h3>
-        <p class="text-gray-400">Learn ML, deep learning, and build smart apps.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <!-- 100 Days DSA Section -->
   <section id="challenges" class="py-12 scroll-mt-20">
@@ -228,6 +248,14 @@
         menuBtn.setAttribute('aria-expanded', 'false');
       });
     });
+
+    const showMoreBtn = document.getElementById('show-more-btn');
+  const hiddenCards = document.querySelectorAll('.more-cards');
+
+  showMoreBtn.addEventListener('click', () => {
+    hiddenCards.forEach(card => card.classList.remove('hidden'));
+    showMoreBtn.style.display = 'none';
+  });
   </script>
 
 </body>
