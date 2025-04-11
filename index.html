@@ -4,21 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="17codes - Learn coding skills through interactive challenges and structured learning" />
+  <meta name="description"
+    content="17codes - Learn coding skills through interactive challenges and structured learning" />
   <title>17codes - Learn. Build. Grow. Together.</title>
 
-  <!-- Tailwind CSS -->
+  <!-- CSS -->
   <link href="./output.css" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:wght@300..900&display=swap" rel="stylesheet" />
-
   <style>
-    
+
   </style>
 </head>
 
@@ -28,11 +23,12 @@
   <header class="py-6">
     <nav class="flex items-center justify-between">
       <a href="#" aria-label="17CODES homepage">
-        <h1 class="font-[Montserrat] font-bold text-3xl sm:text-4xl">17CODES</h1>
+        <h1 class="Montsserrat font-bold text-3xl sm:text-4xl">17CODES</h1>
       </a>
 
       <!-- Hamburger Icon -->
-      <button id="menu-btn" class="flex flex-col justify-between w-8 h-6 md:hidden z-50" aria-label="Toggle menu" aria-expanded="false">
+      <button id="menu-btn" class="flex flex-col justify-between w-8 h-6 md:hidden z-50" aria-label="Toggle menu"
+        aria-expanded="false">
         <span class="hamburger-line bg-white h-1 w-full rounded-sm"></span>
         <span class="hamburger-line bg-white h-1 w-full rounded-sm"></span>
         <span class="hamburger-line bg-white h-1 w-full rounded-sm"></span>
@@ -74,11 +70,13 @@
 
   <!-- Hero -->
   <section class="flex flex-col items-center justify-center text-center py-16 sm:py-20 md:min-h-[80vh]">
-    <h2 class="text-4xl sm:text-6xl font-bold mb-4 leading-tight">Learn. Build. Grow. Together.</h2>
-    <p class="text-base sm:text-lg text-gray-400 mb-6 max-w-xl">Build real-world coding skills through interactive challenges and structured learning.</p>
+    <h2 class="text-5xl sm:text-5xl font-bold mb-4 leading-tight">Learn. Build. Grow. Together.</h2>
+    <p class="text-base sm:text-lg text-gray-400 mb-6 max-w-xl">Build real-world coding skills through interactive
+      challenges and structured learning.</p>
     <div class="flex flex-col sm:flex-row gap-4">
       <a href="#getstarted">
-        <button class="border border-[#2889F4] text-[#2889F4] px-6 py-3 rounded-md hover:bg-[#2889F4] hover:text-white transition">
+        <button
+          class="border border-[#2889F4] text-[#2889F4] px-6 py-3 rounded-md hover:bg-[#2889F4] hover:text-white transition">
           Get Started
         </button>
       </a>
@@ -97,38 +95,41 @@
       <p class="text-base sm:text-lg text-gray-300">Choose your domain</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Always visible cards -->
       <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">DSA</h3>
         <p class="text-gray-400 mb-4">Master Data Structures & Algorithms.</p>
-        <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md">Start Learning</button>
+        <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md cursor-pointer">Start Learning</button>
       </div>
 
       <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">Web Development</h3>
         <p class="text-gray-400 mb-4">HTML, CSS, JS, React, Tailwind, and more.</p>
-        <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md">Start Learning</button>
+        <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md cursor-pointer">Start Learning</button>
       </div>
 
       <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">Python Programming</h3>
         <p class="text-gray-400 mb-4">Scripting, automation, and ML with Python.</p>
-        <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md">Start Learning</button>
+        <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md cursor-pointer">Start Learning</button>
       </div>
 
       <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">Java Programming</h3>
         <p class="text-gray-400 mb-4">OOP & backend development in Java.</p>
-        <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md">Start Learning</button>
+        <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md cursor-pointer">Start Learning</button>
       </div>
 
-      <!-- Hidden on mobile -->
-      <div class="more-cards-wrapper">
-        <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-          <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
-          <p class="text-gray-400 mb-4">Learn ML, deep learning & smart apps.</p>
-          <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md">Start Learning</button>
-        </div>
+      <!-- More hidden cards -->
+      <div class="hidden sm:block more-cards bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
+        <p class="text-gray-400 mb-4">Learn ML, deep learning & smart apps.</p>
+        <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md cursor-pointer">Start Learning</button>
+      </div>
+
+      <div class="hidden sm:block more-cards bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
+        <p class="text-gray-400 mb-4">Learn ML, deep learning & smart apps.</p>
+        <button class="bg-[#2889F4] text-white px-5 py-2 rounded-md cursor-pointer">Start Learning</button>
       </div>
     </div>
 
@@ -139,14 +140,39 @@
     </div>
   </section>
 
+  <!-- 100 Days DSA -->
+  <section id="challenges" class="py-12 scroll-mt-20">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold mb-6">100 Days of DSA Challenge</h2>
+    </div>
+    <div class="bg-[#1A1E28] rounded-xl p-6 shadow-md max-w-md mx-auto text-left">
+      <h3 class="text-lg font-semibold mb-2">100 Days of DSA - Python</h3>
+      <p class="text-sm text-gray-400 mb-4">Master DSA using Python in our structured, step-by-step 100-day program.</p>
+      <button class="w-full bg-[#2889F4] text-white py-2 rounded-md mb-2 hover:bg-[#1a6fd1] transition">Join
+        Now</button>
+      <button
+        class="w-full border border-[#2889F4] text-[#2889F4] py-2 rounded-md hover:bg-[#2889F4] hover:text-white transition">Download
+        Syllabus</button>
+    </div>
+  </section>
+
+  <!-- Placeholder Sections -->
+  <section id="about" class="py-12 scroll-mt-20"></section>
+  <section id="resources" class="py-12 scroll-mt-20"></section>
+  <section id="community" class="py-12 scroll-mt-20"></section>
+  <section id="contact" class="py-12 scroll-mt-20"></section>
+
+  <!-- Footer -->
+  <footer class="py-8 mt-12 border-t border-gray-800 text-center text-gray-400">
+    © 2025 17CODES. All rights reserved.
+  </footer>
+
   <!-- Scripts -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const showMoreBtn = document.getElementById('show-more-btn');
-    const moreCardsWrapper = document.querySelector('.more-cards-wrapper');
-
-    window.history.scrollRestoration = 'manual';
+    const hiddenCards = document.querySelectorAll('.more-cards');
 
     menuBtn.addEventListener('click', () => {
       menuBtn.classList.toggle('open');
@@ -164,7 +190,7 @@
     });
 
     showMoreBtn?.addEventListener('click', () => {
-      moreCardsWrapper.classList.add('open');
+      hiddenCards.forEach(card => card.classList.remove('hidden'));
       showMoreBtn.style.display = 'none';
     });
   </script>
