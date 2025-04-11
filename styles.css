@@ -25,3 +25,53 @@
 html {
     scroll-behavior: smooth;
 }
+
+body {
+      font-family: 'Lexend', sans-serif;
+    }
+
+#menu-btn.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(6px);
+    }
+
+#menu-btn.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+#menu-btn.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-6px);
+    }
+
+.hamburger-line {
+      transition: all 0.3s ease-in-out;
+    }
+
+#mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+#mobile-menu.open {
+      max-height: 500px;
+    }
+
+.more-cards-wrapper {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+.more-cards-wrapper.open {
+      max-height: 1000px;
+    }
+
+@media (min-width: 768px) {
+      .more-cards-wrapper {
+        max-height: none !important;
+        overflow: visible;
+      }
+      #show-more-btn {
+        display: none !important;
+      }
+    }
