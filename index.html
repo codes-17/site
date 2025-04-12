@@ -8,18 +8,31 @@
     content="17codes - Learn coding skills through interactive challenges and structured learning" />
   <title>17codes - Learn. Build. Grow. Together.</title>
 
-  <!-- CSS -->
-  <link href="./output.css" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
+    .fade-in {
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
 <body class="bg-[#0D1017] text-white px-4 sm:px-6 md:px-10">
+  <!-- Header (same as before) -->
+  <!-- Hero Section (same as before) -->
 
-  <!-- Header -->
   <header class="py-7">
     <nav class="flex items-center justify-between">
       <a href="#" aria-label="17CODES homepage">
@@ -70,7 +83,7 @@
 
   <!-- Hero -->
   <section class="flex flex-col items-center justify-center text-center py-16 sm:py-20 md:min-h-[80vh]">
-    <h2 class="text-5xl sm:text-6xl font-bold mb-4 leading-tight">Learn. Build. Grow. Together.</h2>
+    <h2 class="text-5xl sm:text-6xl font-bold mb-4 leading-tight Kanit">Learn. Build. Grow. Together.</h2>
     <p class="text-base sm:text-lg text-gray-400 mb-6 max-w-xl">Build real-world coding skills through interactive
       challenges and structured learning.</p>
     <div class="flex flex-col sm:flex-row gap-4">
@@ -88,125 +101,143 @@
     </div>
   </section>
 
-  <!-- Domain Cards -->
+  <!-- Get Started Section -->
   <section id="getstarted" class="py-16 scroll-mt-20">
     <div class="text-center mb-12">
-      <h2 class="text-4xl sm:text-5xl font-bold mb-2">Get Started</h2>
+      <h2 class="text-4xl sm:text-6xl font-bold mb-2 Kanit">Get Started</h2>
       <p class="text-base sm:text-lg text-gray-300">Choose your domain</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-bold mb-2">DSA</h3>
-        <p class="text-gray-400 mb-4">Master Data Structures & Algorithms.</p>
+
+    <div id="domain-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      <!-- First 6 visible cards -->
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in show text-center">
+        <h3 class="text-2xl font-bold mb-2">DSA</h3>
+        <p class="text-gray-400 mb-4">Ace coding interviews with efficient algorithms.</p>
         <a href="https://nas.io/17.codes">
           <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
         </a>
       </div>
-
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-bold mb-2">Web Development</h3>
-        <p class="text-gray-400 mb-4">HTML, CSS, JS, React, Tailwind, and more.</p>
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in show text-center">
+        <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+        <p class="text-gray-400 mb-4">Build modern websites and web apps from scratch.</p>
+        <a href="./working.html">
+          <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
+        </a>
+      </div>
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in show text-center">
+        <h3 class="text-2xl font-bold mb-2">Python Programming</h3>
+        <p class="text-gray-400 mb-4">Automate tasks and explore ML with Python.</p>
+        <a href="./working.html">
+          <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
+        </a>
+      </div>
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in show text-center">
+        <h3 class="text-2xl font-bold mb-2">Java Programming</h3>
+        <p class="text-gray-400 mb-4">Object-oriented programming & backend dev.</p>
         <a href="./working.html">
           <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
         </a>
       </div>
 
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-bold mb-2">Python Programming</h3>
-        <p class="text-gray-400 mb-4">Scripting, automation, and ML with Python.</p>
+      <!-- Hidden cards -->
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in hidden text-center">
+        <h3 class="text-2xl font-bold mb-2">Cloud Computing</h3>
+        <p class="text-gray-400 mb-4">Explore AWS, Azure & cloud infrastructure.</p>
         <a href="./working.html">
           <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
         </a>
       </div>
-
-      <div class="bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-bold mb-2">Java Programming</h3>
-        <p class="text-gray-400 mb-4">OOP & backend development in Java.</p>
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in hidden text-center">
+        <h3 class="text-2xl font-bold mb-2">Application Development</h3>
+        <p class="text-gray-400 mb-4">Design and deploy Android/iOS mobile apps.</p>
         <a href="./working.html">
           <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
         </a>
       </div>
-
-      <!-- More hidden cards -->
-      <div class="hidden sm:block more-cards bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
-        <p class="text-gray-400 mb-4">Learn ML, deep learning & smart apps.</p>
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in hidden text-center">
+        <h3 class="text-2xl font-bold mb-2">C++ Programming</h3>
+        <p class="text-gray-400 mb-4">Master low-level logic and game development.</p>
         <a href="./working.html">
           <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
         </a>
       </div>
-
-      <div class="hidden sm:block more-cards bg-[#1A1E28] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
-        <p class="text-gray-400 mb-4">Learn ML, deep learning & smart apps.</p>
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in hidden text-center">
+        <h3 class="text-2xl font-bold mb-2">Artificial Intelligence</h3>
+        <p class="text-gray-400 mb-4">Dive into neural networks and smart systems.</p>
+        <a href="./working.html">
+          <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
+        </a>
+      </div>
+      <div class="bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in hidden text-center">
+        <h3 class="text-2xl font-bold mb-2">Web 3</h3>
+        <p class="text-gray-400 mb-4">Learn blockchain, crypto & decentralized apps.</p>
         <a href="./working.html">
           <button class="bg-[#2889F4] text-white px-6 py-2 rounded-md cursor-pointer">Start Learning</button>
         </a>
       </div>
     </div>
 
-    <div class="text-center mt-8 md:hidden">
+    <div class="text-center mt-8">
       <button id="show-more-btn" class="text-[#2889F4] border border-[#2889F4] px-6 py-2 rounded-md">
         Show More
       </button>
     </div>
   </section>
 
-  <!-- 100 Days DSA -->
-  <!-- <section id="challenges" class="py-12 scroll-mt-20">
+  <!-- 100 Days of DSA Section -->
+  <section id="dsa100" class="py-16 scroll-mt-20">
     <div class="text-center mb-10">
-      <h2 class="text-3xl font-bold mb-6">100 Days of DSA Challenge</h2>
+      <h2 class="text-4xl sm:text-6xl sm:pb-6 font-bold mb-6 Kanit">100 Days of DSA</h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Left Content -->
+        <div class="text-left">
+          <p class="text-gray-300 text-base sm:text-lg mb-6">Master Data Structures & Algorithms from scratch in just
+            100 days — whether you're coding in Python, Java, or C++! This challenge is designed to help you build
+            strong problem-solving skills, one day at a time, with a structured and beginner-friendly approach.</p>
+          <p class="text-gray-300 text-base sm:text-lg mb-6">📦 What You’ll Get: <br>
+            ✅ Step-by-step DSA roadmap (Python, Java, or C++) <br>
+            ✅ Beginner-friendly explanations & documentation <br>
+            ✅ Handpicked YouTube videos for visual learning <br>
+            ✅ Daily problems + real interview-style questions <br>
+            ✅ Resume prep, mock tests, and final interview prep phase <br>
+            ✅ Community support and regular check-ins for consistency <br> </p>
+          <button class="bg-[#2889F4] text-white px-6 py-3 rounded-md hover:bg-[#1a6fd1] transition">Join Now</button>
+        </div>
+
+        <!-- Right Language Boxes -->
+        <div class="flex flex-col items-center text-left gap-6">
+          <div class="flex gap-6">
+            <div
+              class="cursor-pointer bg-[#1A1E28] p-6 rounded-lg shadow-md hover:scale-105 transition-transform w-36 h-36 flex items-center justify-center">
+              <img src="./python-icon.png" alt="Python" class="h-16" />
+            </div>
+            <div
+              class="cursor-pointer bg-[#1A1E28] p-6 rounded-lg shadow-md hover:scale-105 transition-transform w-36 h-36 flex items-center justify-center">
+              <img src="./java-icon.png" alt="Java" class="h-16" />
+            </div>
+          </div>
+          <div
+            class="cursor-pointer bg-[#1A1E28] p-6 rounded-lg shadow-md hover:scale-105 transition-transform w-36 h-36 flex items-center justify-center">
+            <img src="./cpp-icon.png" alt="C++" class="h-16" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="bg-[#1A1E28] rounded-xl p-6 shadow-md max-w-md mx-auto text-left">
-      <h3 class="text-lg font-semibold mb-2">100 Days of DSA - Python</h3>
-      <p class="text-sm text-gray-400 mb-4">Master DSA using Python in our structured, step-by-step 100-day program.</p>
-      <button class="w-full bg-[#2889F4] text-white py-2 rounded-md mb-2 hover:bg-[#1a6fd1] transition">Join
-        Now</button>
-      <button
-        class="w-full border border-[#2889F4] text-[#2889F4] py-2 rounded-md hover:bg-[#2889F4] hover:text-white transition">Download
-        Syllabus</button>
-    </div>
-  </section> -->
+  </section>
 
-  <div id="moretocome" class="flex items-center justify-center">
-    <h1 class="font-semibold Montsserrat ">More To Come, Stay Connected!</h1>
-  </div>
-
-  <!-- Placeholder Sections -->
-  <section id="about" class="py-12 scroll-mt-20"></section>
-  <section id="resources" class="py-12 scroll-mt-20"></section>
-  <section id="community" class="py-12 scroll-mt-20"></section>
-  <section id="contact" class="py-12 scroll-mt-20"></section>
-
-  <!-- Footer -->
   <footer class="py-8 mt-12 border-t border-gray-800 text-center text-gray-400">
     © 2025 17CODES. All rights reserved.
   </footer>
 
-  <!-- Scripts -->
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
     const showMoreBtn = document.getElementById('show-more-btn');
-    const hiddenCards = document.querySelectorAll('.more-cards');
+    const hiddenCards = document.querySelectorAll('.fade-in.hidden');
 
-    menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', menuBtn.classList.contains('open'));
-    });
-
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menuBtn.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
+    showMoreBtn.addEventListener('click', () => {
+      hiddenCards.forEach(card => {
+        card.classList.remove('hidden');
+        setTimeout(() => card.classList.add('show'), 100);
       });
-    });
-
-    showMoreBtn?.addEventListener('click', () => {
-      hiddenCards.forEach(card => card.classList.remove('hidden'));
       showMoreBtn.style.display = 'none';
     });
   </script>
