@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Show More Button Logic
+    // ===== Show More Button Logic =====
     const showMoreBtn = document.getElementById("show-more-btn");
     const hiddenCards = document.querySelectorAll(".fade-in.hidden");
 
     if (showMoreBtn) {
         showMoreBtn.addEventListener("click", () => {
-            hiddenCards.forEach((card, i) => {
+            hiddenCards.forEach((card, index) => {
                 setTimeout(() => {
                     card.classList.remove("hidden");
                     card.classList.add("fade-in");
-                }, i * 100);
+                }, index * 100); // Staggered reveal effect
             });
-            showMoreBtn.style.display = "none";
+            showMoreBtn.style.display = "none"; // Hide the button after clicking
         });
     }
 
-    // Hamburger Menu Logic
+    // ===== Hamburger Menu Logic =====
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             menuBtn.classList.toggle("open");
             mobileMenu.classList.toggle("open");
 
+            // Update ARIA attribute for accessibility
             menuBtn.setAttribute("aria-expanded", String(!isOpen));
         });
     }
